@@ -4,7 +4,7 @@ file { '/tmp/dir':
 }
 
 exec { 'newdir':
-  command     => `mkdir -p /tmp/dir`,
+  command     => '`mkdir` -p /tmp/dir',
   refreshonly => true,
   logoutput   => true,
 }
