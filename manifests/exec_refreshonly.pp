@@ -1,5 +1,4 @@
 file { '/tmp/dir':
-  ensure => directory,
   notify => Exec['newdir'],
 }
 
