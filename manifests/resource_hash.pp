@@ -1,10 +1,10 @@
 $attributes = {
-  'owner' => 'vagrant'
-  'group' => 'vagrant'
-  'mode'  => '0644'
+  'owner' => 'vagrant',
+  'group' => 'vagrant',
+  'mode'  => '0644',
 }
 
 file { '/tmp/test.txt':
-  ensure => present
-  *      => $attributes
+  ensure => present,
+  *      => $attributes,
 }
