@@ -1,10 +1,11 @@
 file { '/tmp/direct':
+  ensure => directory,
   notify => Exec['newdir'],
 }
 
 exec { 'newdir':
-  cwd         => '/tmp/'
-  command     => '/bin/mkdir direct/',
+  cwd         => '/tmp/direct'
+  command     => '/bin/touch somefile.txt',
   refreshonly => true,
   logoutput   => true,
 }
